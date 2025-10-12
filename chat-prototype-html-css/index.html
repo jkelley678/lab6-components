@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <title>Prototype</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+
+            <section class="chat-history" aria-label="Chat message history">
+            
+
+                <message-bot>
+                    <message-content>
+                        <p>Hello! How can I help you today?</p>
+                        <t-o-m>10:00 AM</t-o-m>
+                    </message-content>
+                </message-bot>
+
+                <message-user>
+                    <message-content>
+                    <p>I need help with my order.</p>
+                    <t-o-m>10:01 AM</t-o-m>
+                    </message-content>
+                </message-user>
+
+                <message-bot>
+                    <message-content>
+                        <p>What can I help you with?</p>
+                        <t-o-m>10:01 AM</t-o-m>
+                    </message-content>
+                </message-bot>
+
+                <message-user>
+                    <message-content>
+                    <p>I got an email that said my answer was cancelled.</p>
+                    <t-o-m>10:02 AM</t-o-m>
+                    </message-content>
+                </message-user>
+
+            </section>
+
+
+            <form action="#" method="POST" aria-label="Send a message">
+            <input type="text" name="message" placeholder="Type a message..." required >
+            <button type="submit">Send</button>
+            </form>
+        </main>
+    </body>
+</html>
