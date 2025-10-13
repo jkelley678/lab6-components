@@ -1,78 +1,106 @@
+
 body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #770ce9;
     }
+title-text{
+    background: #648eef;
+    color:white;
+}
+title-text h1{
+    font-size: 30px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+title-text p{
+    display:flex;
+    margin-top: 0;
+    justify-content: center;
+}
+ main {
+    width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #ffffff;
+     overflow: hidden;
+}
 
-    main {
-      width: 400px;
-      max-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #ffffff;
-      overflow: hidden;
-    }
+.chat-history {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
 
-    .chat-history {
-      flex: 1;
-      padding: 1rem;
-      overflow-y: auto;
-      background: #f9f9f9;
-    }
+message-bot, message-user {
+    display: block;
+    
+    margin-bottom: 2rem;
+}
+message-content {
+    display: block;
+    padding: 5px;
+    border-radius: 15px 15px 15px 4px;
+    background-color: #c3c0c3e8;
+}
+message-bot{
+    width:400px;
+    justify-content: flex-start;
+}
+message-user{
+    color:white;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
 
-    message-bot, message-user {
-      display: block;
-      margin-bottom: 2rem;
-    }
 
-    message-content {
-      display: block;
-      padding: 0.75rem;
-      border-radius: 8px;
-      background-color: #e6b0ec;
-    }
 
-    message-user message-content {
-      background-color: #a8daf7;
-      text-align:right
+message-user message-content {
 
-    }
+    margin-left: 200px;
+    justify-content: end;
+    border-radius: 15px 15px 4px 15px;
+    background-color: #648eef;
+    text-align:right
+}
 
-    t-o-m {
-      display: block;
-      font-size: 0.75rem;
-      color: #7c7878;
-      margin-top: 0.25rem;
-    }
+t-o-m {
+    display: block;
+    font-size: 0.75rem;
+    color: #7c7878;
+    margin-top: 0.1rem;
+}
 
-    form {
-      display: flex;
-      border-top: 1px solid #ccc;
-      padding: 0.5rem;
-    }
+form {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 0.5rem;
+}
 
-    input[type="text"] {
-      flex: 1;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-right: 0.5rem;
-    }
+input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
 
-    button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
