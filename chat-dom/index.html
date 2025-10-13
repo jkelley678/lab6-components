@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM RnD</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="module">
+        import { getBotResponse } from './script.js';
+
+        const DEBUG = false;
+        const log = (msg) => { if (DEBUG) console.log(msg); };
+      
+
+        function showResponse(response) {
+            addToChatWindow(response, 'Bot');
+        }
+
+        function getResponse(message) {
+            return getBotResponse(message);
+        }
+
+        function processMessage(message) {
+            let response = getResponse(message);
+
+            showResponse(response);
+        }
+
+
+        function addToChatWindow(message, speaker) {
+            let chatWindow = document.getElementById('chatWindow');
+            chatWindow.innerHTML += `<p class="${speaker}">${speaker}: ${message}</p>`;
+        }
+
+
+        function send() {
+            let messageBox = document.getElementById('messageBox');
+            let message = messageBox.value;
+
+            let chatWindow = document.getElementById('chatWindow');
+            
+            messageBox.value = ''; 
+            messageBox.focus();
+
+            addToChatWindow(message,'User');
+
+            processMessage(message);
+        }
+
+
+        function init() {
+            log('Initializing chat interface');
+            
+            document.getElementById('chatForm').addEventListener('submit', function (event) {
+                event.preventDefault(); 
+                send();
+            });
+            
+        }
+        
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</head>
+<body>
+    <chat-widget>
+        <title-text>
+                <h1>Chat Assistent</h1><br>
+                <p>DOM:  HTML,CSS, with JavScript and Eliza matching logic</p>
+            </title-text>
+        <chat-window id="chatWindow"></chat-window>
+           <form id="chatForm">
+                <input type="text" placeholder="Type a message" id="messageBox" autocomplete="off">
+                <button id="sendBtn"  type="submit" >Send</button>
+            </form>
+    </chat-widget>
+ </body>
+</html>

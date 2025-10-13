@@ -5,32 +5,32 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #770ce9;
     }
 title-text{
     background: #648eef;
     color:white;
 }
 title-text h1{
-    font-size: 30px;
+    font-size: 20px;
     display:flex;
     justify-content: center;
     margin-bottom: 0;
 }
 title-text p{
     display:flex;
+    font-size:13px;
     margin-top: 0;
     justify-content: center;
 }
  main {
-    width: 600px;
+    width: 500px;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #ffffff;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 .chat-history {
@@ -69,7 +69,7 @@ message-user message-content {
     justify-content: end;
     border-radius: 15px 15px 4px 15px;
     background-color: #648eef;
-    text-align:right
+    text-align:right;
 }
 
 t-o-m {
@@ -99,7 +99,6 @@ button {
     background-color: #007bff;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
 }
 button:hover {
     background-color: #0056b3;
