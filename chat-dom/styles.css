@@ -11,6 +11,7 @@ title-text h1{
     font-size: 20px;
     display:flex;
     justify-content: center;
+
     margin-bottom: 0;
 }
 title-text p{
@@ -18,6 +19,7 @@ title-text p{
     font-size:13px;
     margin-top: 0;
     justify-content: center;
+
 }
 chat-widget {
     display: flex;
