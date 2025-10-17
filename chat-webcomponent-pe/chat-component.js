@@ -1,4 +1,3 @@
-
 import { getBotResponse } from './eliza.js';
 
 class SimpleChat extends HTMLElement {
@@ -11,10 +10,6 @@ class SimpleChat extends HTMLElement {
     this.form = this.querySelector('form.input-area');
     this.input = this.querySelector('input');
 
-    if (!this.form || !this.input || !this.messagesContainer) {
-      console.warn('Chat elements missing from <simple-chat>');
-      return;
-    }
 
     this.addMessage('bot', 'Bot: Hello! How can I help you today?');
 
