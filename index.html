@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab 6 - Component Approaches</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section id="topic">
+      <h1>Chat Component</h1>
+      <p class="subheading">Prototype + Three Approaches to Component-Based Thinking</p>
+    </section>
+
+    <row-box>
+      <info-box>
+        <span class="badge">Prototype</span>
+        <h1>Pure HTML & CSS</h1>
+        <p>A static mockup using only HTML and CSS to work out the interface design.</p>
+        <ul>
+          <li>✅ No dependencies</li>
+          <li>✅ Always accessible</li>
+          <li>✅ Simple to understand</li>
+          <li>❌ No interactivity</li>
+        </ul>
+        <a href="chat-prototype-html-css/">View Demo →</a>
+    </info-box>
+
+      <info-box>
+        <span class="badge">Approach 1</span>
+        <h1>DOM Manipulation</h1>
+        <p>Interactive chat using vanilla JavaScript and standard DOM methods.</p>
+        <ul>
+          <li>✅ Full interactivity</li>
+          <li>✅ Eliza-style bot</li>
+          <li>✅ Standard JavaScript</li>
+          <li>❌ No encapsulation</li>
+        </ul>
+        <a href="chat-dom/">View Demo →</a>
+      </info-box>
+    </row-box>
+
+    <row-box>
+      <info-box>
+        <span class="badge">Approach 2</span>
+        <h1>Progressive Enhancement</h1>
+        <p>Custom element that enhances existing HTML markup with JavaScript.</p>
+        <ul>
+          <li>✅ Graceful degradation</li>
+          <li>✅ Semantic base HTML</li>
+          <li>✅ Web Components API</li>
+          <li>✅ Global styles</li>
+        </ul>
+        <a href="chat-webcomponent-pe/">View Demo →</a>
+      </info-box>
+
+      <info-box>
+        <span class="badge">Approach 3</span>
+        <h1>Web Component</h1>
+        <p>Fully encapsulated custom element with Shadow DOM and internal styles.</p>
+        <ul>
+          <li>✅ Complete encapsulation</li>
+          <li>✅ Shadow DOM</li>
+          <li>✅ Self-contained</li>
+          <li>✅ Highly reusable</li>
+        </ul>
+        <a href="chat-webcomponent-gd/">View Demo →</a>
+      </info-box>
+    </row-box>
+
+
+  </main>
+</body>
+</html>
