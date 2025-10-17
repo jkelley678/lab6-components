@@ -32,6 +32,8 @@ lab6-components/
 - **DOM Approach:** Adds JavaScript for dynamic chat and Eliza-style pattern matching.
 - **Web Component:** Encapsulated `<chat-interface>` custom element for reusable chat UI.
 - **Progressive Enhancement:** Each version builds on the previous, introducing more advanced web concepts.
+## Github Pages Link
+https://jkelley678.github.io/lab6-components/
 
 ## License
 This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for
