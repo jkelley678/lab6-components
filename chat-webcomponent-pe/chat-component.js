@@ -25,7 +25,12 @@ class SimpleChat extends HTMLElement {
       this.addMessage('bot', "Bot: " + response);
     });
   }
-
+  /**
+   * Appends a message element to the messages container and scrolls to the bottom.
+   * @param {'user'|'bot'} sender - Indicates the message sender; used as a CSS class.
+   * @param {string} text - The message text to display.
+   * @returns {void}
+   */
   addMessage(sender, text) {
     const messageEl = document.createElement('div');
     messageEl.className = `message ${sender}`;
