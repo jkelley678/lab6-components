@@ -133,7 +133,12 @@ class ChatInterface extends HTMLElement {
     this.setupEventListeners();
     this.addMessage('Bot: Hello! How can I help you today?', false);
   }
-
+  /**
+   * Attaches event listeners for the input form submission.
+   * On submit, the user's message is added to the chat and a bot response
+   * (from the imported getBotResponse function) is added.
+   * @returns {void}
+   */
   setupEventListeners() {
     const form = this.shadowRoot.querySelector('.input-form');
     const input = this.shadowRoot.querySelector('input');
@@ -150,7 +155,12 @@ class ChatInterface extends HTMLElement {
       this.addMessage('Bot: ' + response, false);
     });
   }
-
+  /**
+   * Appends a message element to the messages container and scrolls to bottom.
+   * @param {string} text - The full message text to display (e.g. "User: Hi").
+   * @param {boolean} isUser - True if the message came from the user; false for bot.
+   * @returns {void}
+   */
   addMessage(text, isUser) {
     const messagesContainer = this.shadowRoot.querySelector('.messages');
     const messageEl = document.createElement('div');
@@ -159,7 +169,12 @@ class ChatInterface extends HTMLElement {
     messagesContainer.appendChild(messageEl);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   }
-
+  /**
+   * Proxy method that returns a bot response for the provided message.
+   * This delegates to the imported getBotResponse function.
+   * @param {string} message - The user's message to generate a response for.
+   * @returns {string} The bot's response.
+   */
   getBotResponse(message) {
     return getBotResponse(message);
   }
